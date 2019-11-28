@@ -1,29 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
 <title>Personal Website of Erik Thiede</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the header */
+header {
+  background-color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 35px;
+  color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+aside {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: white;
+  padding: 30px;
+}
+
+article {
+  float: left;
+  padding: 30px;
+  width: 70%;
+  background-color: white;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  aside, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
-    <div id = "header">
-        <table></tr>
-        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face."> 
-        <h1>Erik Henning Thiede</h1>
-        </tr></table>
-    </div>
-    <body>
+<body>
+<header>
+  <h2>Erik Henning Thiede</h2>
+</header>
+
+<section>
+  <aside>
+      <!--
+    <ul>
+      <li><a href="#">London</a></li>
+      <li><a href="#">Paris</a></li>
+      <li><a href="#">Tokyo</a></li>
+    </ul>
+      -->
+        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="auto"> 
+  </aside>
+  
+  <article>
         <p>
             I am a postdoctoral scholar in theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
-            <br />
-            <br />
+            <br>
+            <br>
             Currently, I am appointed at the University of Chicago and a long-term visiting scholar at the Flatiron Institute.  
             I am working with Prof. Risi Kondor on developing new machine learning architectures for molecular systems.
-            <br />
-            <br />
-            <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&hl=en">Google Scholar</a> 
-            <br />
+            <br>
+            <br>
+            <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
+            <br>
             <a href="ehthiede_cv.pdf">Curriculum Vitae</a> 
-            <br />
+            <br>
             <a href="https://serafinaha.wixsite.com/byserafina">Link to the artist page of my amazing and wonderful wife.</a> 
         </p>
-    </body>
-</html> 
+  </article>
+</section>
+</body>
