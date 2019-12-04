@@ -11,7 +11,8 @@
 
 /* Style the header */
 header {
-  background-color: white;
+  /* background-color: grey; */
+  background-color: #bfbfbf;
   padding: 5px;
   text-align: center;
   font-size: 35px;
@@ -23,13 +24,14 @@ aside {
   float: left;
   width: 30%;
   /* height: 300px;  only for demonstration, should be removed */
-  background: white;
-  padding: 30px;
+  background: #bfbfbf;
+  padding: 0px;
 }
 
 article {
   float: left;
-  padding: 30px;
+  padding-left: 30px;
+  padding-top: 00px;
   width: 70%;
   background-color: white;
   /* height: 300px; /* only for demonstration, should be removed */
@@ -53,7 +55,7 @@ img {
 </head>
 <body>
 <header>
-  <h2>Erik Henning Thiede</h2>
+  <h1>Erik Henning Thiede</h1>
 </header>
 
 <section>
@@ -65,10 +67,19 @@ img {
       <li><a href="#">Tokyo</a></li>
     </ul>
       -->
-        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="auto"> 
+        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="auto" align="center"> 
+        <p align='center'>
+        <br>
+        <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
+        <br>
+        <a href="ehthiede_cv.pdf">Curriculum Vitae</a> 
+        <br>
+        <a href="https://serafinaha.wixsite.com/byserafina">Artist page of my amazing and wonderful spouse</a> 
+        </p>
   </aside>
   
   <article>
+            <h2>About Me</h2>
         <p>
             I am a postdoctoral scholar in theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
             <br>
@@ -77,12 +88,26 @@ img {
             I am working with Prof. Risi Kondor on developing new machine learning architectures for molecular systems.
             This work is in close collaboration with Prof. Frank No&#233 at Freie Universit&#228t Berlin.
             <br>
-            <br>
-            <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
-            <br>
-            <a href="ehthiede_cv.pdf">Curriculum Vitae</a> 
-            <br>
-            <a href="https://serafinaha.wixsite.com/byserafina">Artist page of my amazing and wonderful spouse</a> 
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>
+                    <a href="https://aip.scitation.org/doi/abs/10.1063/1.5063730">
+                        Galerkin approximation of dynamical quantities using trajectory data
+                    </a>
+                </li>
+                <li>
+                    <a href="https://arxiv.org/pdf/1705.08445.pdf">
+                        Stratification as a general variance reduction method for Markov chain Monte Carlo
+                    </a>
+                </li>
+                <li>
+                    <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">
+                        Eigenvector method for umbrella sampling enables error analysis
+                    </a>
+                </li>
+            </ul>
+        </p>
+        <p>
         </p>
   </article>
 </section>
