@@ -24,7 +24,7 @@ aside {
   float: left;
   width: 30%;
   /* height: 300px;  only for demonstration, should be removed */
-  background: #bfbfbf;
+  background: white;
   padding: 0px;
 }
 
@@ -81,13 +81,48 @@ img {
   <article>
             <h2>About Me</h2>
         <p>
-            I am a postdoctoral scholar in theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
+            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
             <br>
             <br>
             Currently, I am appointed at the University of Chicago and a long-term visiting scholar at the Flatiron Institute.  
             I am working with Prof. Risi Kondor on developing new machine learning architectures for molecular systems.
             This work is in close collaboration with Prof. Frank No&#233 at Freie Universit&#228t Berlin.
             <br>
+            <h2>Current Projects</h2>
+            <ul>
+                <li>
+                    <h3>New architectures for Neural Wavefunctions</h3>
+                    Learning the electronic structure of molecules requires explicitly treating many-electron correlations in the electronic wavefunction.
+                    At the same time, the wavefunctions must obey global antisymmetry: exchanging any two electrons causes the wavefunction to change sign.
+                    I am working to develop neural architectures that explicitly account for these correlations while maintaining global antisymmetry using the mathematics of the permutation group.
+                    This work also touches on broader questions regarding inference on sets.
+                </li>
+                <li>
+            <h3>Neural Architectures for CryoEM</h3>
+            CryoEM allows one to capture millions of images of a biomolecule, each of which is a two-dimensional projection of the molecular structure.  
+            These images must then be combined to form a three-dimensional molecular structure; a task complicated by the high noise levels in the image.
+            A key step in the recombination is learning the relative angles between the projection axis in each image.
+            <a href="https://hannahlawrence.github.io/">Hannah Lawrence</a> and I are developing neural techniques for learning these relative rotations.
+                </li>
+                <li>
+            <h3>Improvements in Spectral Analysis of Markov Processes</h3>
+            Schemes such as Markov state modelling (MSMs) and time-lagged independent component analysis (TICA) are common dimensionality reduction techniques for molecular simulations.
+            These are both examples of a general scheme, the linear Variational Approach to Conformational Dynamics (VAC).
+            However, the accuracy of VAC can be highly sensitive to the choice of basis and statistical error.  Moreover, the sensitivity to these error sources can depend strongly on a parameter known as the <i>lag time</i>.
+            <br>
+            In the last year of my PhD, my collaborators <a href="https://cims.nyu.edu/~rw2515/">Rob Webber</a>, Douglas Dow, and I began work on error analysis of VAC.
+            This work has resulted in the first convergence proofs for the VAC eigenfunctions, as well as new heuristics in choosing the lag time.
+            In addition, it has motivated a new scheme that combines information from multiple lag times.
+            We are currently preparing this work for publication.
+                </li>
+                <li>
+            <h3>Error Estimates for MBAR</h3>
+            The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
+            In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
+            Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
+            I am mentoring Sherry Li in exploring and extending these expressions.
+                </li>
+            </ul>
             <h2>Selected Publications</h2>
             <ul>
                 <li>
