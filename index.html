@@ -15,8 +15,9 @@ header {
   background-color: #bfbfbf;
   padding: 5px;
   text-align: center;
-  font-size: 35px;
+  font-size: 20px;
   color: black;
+  font-family: Helvetica
 }
 
 /* Create two columns/boxes that floats next to each other */
@@ -26,6 +27,7 @@ aside {
   /* height: 300px;  only for demonstration, should be removed */
   background: white;
   padding: 0px;
+  font-family: Helvetica
 }
 
 article {
@@ -34,6 +36,7 @@ article {
   padding-top: 00px;
   width: 70%;
   background-color: white;
+  font-family: Helvetica
   /* height: 300px; /* only for demonstration, should be removed */
 }
 
@@ -43,14 +46,48 @@ img {
   max-height: 100%;
 }
 
+.collapsible {
+  background-color: #bfbfbf;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+.active, .collapsible:hover {
+  background-color: #888;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  <!-- transition: max-height 0.2s ease-out; -->
+  background-color: #f1f1f1;
+}
+
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
   aside, article {
     width: 100%;
     height: auto;
   }
-}
 </style>
 </head>
 <body>
@@ -67,7 +104,7 @@ img {
       <li><a href="#">Tokyo</a></li>
     </ul>
       -->
-        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="auto" align="center"> 
+        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="100%" class="marginauto"> 
         <p align='center'>
         <br>
         <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
@@ -77,77 +114,91 @@ img {
         <a href="https://serafinaha.wixsite.com/byserafina">Artist page of my amazing and wonderful spouse</a> 
         </p>
   </aside>
-  
   <article>
             <h2>About Me</h2>
         <p>
             I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
             <br>
             <br>
-            Currently, I am a Research Fellow at the Flatiron Institute, in the CCM.
+            Currently, I am a Research Fellow at the Flatiron Institute, in the Center for Computational Mathematics (CCM).
             <br>
-            <h2>Current Projects</h2>
-            <ul>
-                <li>
-                    <h3>New approaches for learning on Permutation-equivariant structures </h3>
-                    Chemical systems are complex arrangements of identical parts.  
-                    As a consequence, symmetry under permutation is fundamental to chemical systems.
-                    However, this symmetry also severely restricts the space of possible learning algorithms:
-                    if not constructed carefully, algorithms that attempt to learn new structures must face a combinatorial explosion
-                    in the number of terms.
-                    Currently, I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems.
-                    By intelligently exploiting and learning substructures of a chemical system, 
-                    we hope to generate richer representations of chemical systems.
-                </li>
-                <li>
-                    <h3>Neural Architectures for CryoEM</h3>
-                    CryoEM allows one to capture millions of images of a biomolecule, each of which is a two-dimensional projection of the molecular structure.  
-                    These images must then be combined to form a three-dimensional molecular structure; a task complicated by the high noise levels in the image.
-                    A key step in the recombination is learning the relative angles between the projection axis in each image.
-                    <a href="https://hannahlawrence.github.io/">Hannah Lawrence</a> and I are developing neural techniques for learning these relative rotations.
-                    In addition, I am working with Dr. Pilar Cossio on new algorithms for extracting free energy surfaces from CryoEM data.
-                </li>
-                <li>
-                    <h3>Error Estimates for MBAR</h3>
-                    The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
-                    In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
-                    Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
-                    I am mentoring Sherry Li in exploring and extending these expressions.
-                </li>
-            </ul>
-            <h2>Selected Publications</h2>
-            <ul>
-                <li>
-                    <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.0c06477">
-                        Integrated Variational Approach to Conformational Dynamics: A Robust Strategy for Identifying Eigenfunctions of Dynamical Operators
-                    </a>
-                </li>
-                <li>
-                    <a href="https://arxiv.org/pdf/2005.02248.pdf">
-                        Error bounds for dynamical spectral estimation
-                    </a> (Accepted at SIAM Journal for Data Science)
-                </li>
-                <li>
-                    <a href="https://aip.scitation.org/doi/abs/10.1063/1.5063730">
-                        Galerkin approximation of dynamical quantities using trajectory data
-                    </a>
-                </li>
-                <li>
-                    <a href="https://arxiv.org/pdf/1705.08445.pdf">
-                        Stratification as a general variance reduction method for Markov chain Monte Carlo
-                    </a>
-                </li>
-                <li>
-                    <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">
-                        Eigenvector method for umbrella sampling enables error analysis
-                    </a>
-                </li>
-            </ul>
-        </p>
-        <p>
-        </p>
+<h2>Current Projects</h2>
+<button class="collapsible">New approaches for learning on permutation-equivariant structures</button>
+<div class="content">
+    <p>
+        Chemical systems are complex arrangements of identical parts.  
+        As a consequence, symmetry under permutation is fundamental to chemical systems.
+        However, this symmetry also severely restricts the space of possible learning algorithms:
+        if not constructed carefully, algorithms that attempt to learn new structures must face a combinatorial explosion
+        in the number of terms.
+        Currently, I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems.
+        By intelligently exploiting and learning substructures of a chemical system, 
+        we hope to generate richer representations of chemical systems.
+    </p>
+</div>
+<button class="collapsible">Error Estimates for MBAR</button>
+<div class="content">
+  <p>
+    The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
+    In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
+    Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
+    I am mentoring Sherry Li in exploring and extending these expressions.
+  </p>
+</div>
+
+<h2>Selected Publications</h2>
+    <ul>
+        <li>
+            <a href="https://arxiv.org/abs/2103.01710">
+                Autobahn: Automorphism-based Graph Neural Nets
+            </a>
+        </li>
+        <li>
+            <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.0c06477">
+                Integrated Variational Approach to Conformational Dynamics: A Robust Strategy for Identifying Eigenfunctions of Dynamical Operators
+            </a>
+        </li>
+        <li>
+            <a href="https://epubs.siam.org/doi/abs/10.1137/20M1335984">
+                Error bounds for dynamical spectral estimation
+            </a>
+        </li>
+        <li>
+            <a href="https://aip.scitation.org/doi/abs/10.1063/1.5063730">
+                Galerkin approximation of dynamical quantities using trajectory data
+            </a>
+        </li>
+        <li>
+            <a href="https://arxiv.org/pdf/1705.08445.pdf">
+                Stratification as a general variance reduction method for Markov chain Monte Carlo
+            </a>
+        </li>
+        <li>
+            <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">
+                Eigenvector method for umbrella sampling enables error analysis
+            </a>
+        </li>
+    </ul>
   </article>
 </section>
 
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
 </body>
 </html>
+
