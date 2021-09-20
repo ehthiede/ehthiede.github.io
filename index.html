@@ -23,7 +23,7 @@ header {
 /* Create two columns/boxes that floats next to each other */
 aside {
   float: left;
-  width: 30%;
+  width: 20%;
   /* height: 300px;  only for demonstration, should be removed */
   background: white;
   padding: 0px;
@@ -34,7 +34,7 @@ article {
   float: left;
   padding-left: 30px;
   padding-top: 00px;
-  width: 70%;
+  width: 80%;
   background-color: white;
   font-family: Helvetica
   /* height: 300px; /* only for demonstration, should be removed */
@@ -52,7 +52,7 @@ img {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: none;
+  border: 1px solid black;
   text-align: left;
   outline: none;
   font-size: 15px;
@@ -91,9 +91,9 @@ img {
 </style>
 </head>
 <body>
-<header>
-  <h1>Erik Henning Thiede</h1>
-</header>
+<!-- <header> -->
+  <!-- <h1>Erik Henning Thiede</h1> -->
+<!-- </header> -->
 
 <section>
   <aside>
@@ -106,7 +106,9 @@ img {
       -->
         <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="100%" class="marginauto"> 
         <p align='center'>
-        <br>
+        <!-- <br> -->
+        <h2>Erik Henning Thiede</h2>
+        <!-- <br> -->
         <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
         <br>
         <a href="ehthiede_cv.pdf">Curriculum Vitae</a> 
@@ -115,16 +117,35 @@ img {
         </p>
   </aside>
   <article>
-            <h2>About Me</h2>
+            <!-- <h2>About Me</h2> -->
         <p>
-            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that, theoretically, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
-            <br>
-            <br>
+            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that theoretically speaking, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
             Currently, I am a Research Fellow at the Flatiron Institute, in the Center for Computational Mathematics (CCM).
             <br>
 <h2>Current Projects</h2>
-<button class="collapsible">New approaches for learning on permutation-equivariant structures</button>
-<div class="content">
+<!-- <button class="collapsible">New approaches for learning on permutation-equivariant structures</button> -->
+<!-- <div class="content"> -->
+<!--     <p> -->
+<!--         Chemical systems are complex arrangements of identical parts. -->  
+<!--         As a consequence, symmetry under permutation is fundamental to chemical systems. -->
+<!--         However, this symmetry also severely restricts the space of possible learning algorithms: -->
+<!--         if not constructed carefully, algorithms that attempt to learn new structures must face a combinatorial explosion -->
+<!--         in the number of terms. -->
+<!--         Currently, I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems. -->
+<!--         By intelligently exploiting and learning substructures of a chemical system, --> 
+<!--         we hope to generate richer representations of chemical systems. -->
+<!--     </p> -->
+<!-- </div> -->
+<!-- <button class="collapsible">Error Estimates for MBAR</button> -->
+<!-- <div class="content"> -->
+<!--   <p> -->
+<!--     The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations. -->
+<!--     In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations. -->
+<!--     Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error. -->  
+<!--     I am mentoring Sherry Li in exploring and extending these expressions. -->
+<!--   </p> -->
+<!-- </div> -->
+<h3>New approaches for learning on permutation-equivariant structures</h3>
     <p>
         Chemical systems are complex arrangements of identical parts.  
         As a consequence, symmetry under permutation is fundamental to chemical systems.
@@ -135,16 +156,13 @@ img {
         By intelligently exploiting and learning substructures of a chemical system, 
         we hope to generate richer representations of chemical systems.
     </p>
-</div>
-<button class="collapsible">Error Estimates for MBAR</button>
-<div class="content">
+<h3>Error Estimates for MBAR</h3>
   <p>
     The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
     In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
     Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
     I am mentoring Sherry Li in exploring and extending these expressions.
   </p>
-</div>
 
 <h2>Selected Publications</h2>
     <ul>
