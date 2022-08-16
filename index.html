@@ -119,11 +119,13 @@ img {
   <article>
             <h2>About Me</h2>
         <p>
-            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that theoretically speaking, I can both use computers and do chemistry.  I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
-            Currently, I am a research fellow at the Flatiron Institute, in the Center for Computational Mathematics (CCM).  
+            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that theoretically speaking, I can both use computers and do chemistry.  
+            I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
+            Currently, I am a research fellow at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/">Flatiron Institute Center for Computational Mathematics (CCM)</a>.
+            There, I spend most of my time thinking about how we can take molecules and molecular data, feed it into a computer, and get scientific insight back out.
             <br>
 <h4>Contact Information</h4>
-You can reach me through email at <a href="ehthiede@bentcopperinstitute.org">ehthiede@bentcopperinstitute.org</a>.  Ok, so that's not <i>quite</i> right. Time to see if you, dear reader, pass the Turing test :-).
+You can reach me through email at <a href="ehthiede@bentcopperinstitute.org">ehthiede@bentcopperinstitute.org</a>.  Ok, so that's not <i>quite</i> right. Time to see if you, dear reader, pass the Turing test.  If you are indeed a human and not a bot, you should be able to change the email address to be correct :-).
 
 <h2>Current Projects</h2>
 <!-- <button class="collapsible">New approaches for learning on permutation-equivariant structures</button> -->
@@ -159,20 +161,36 @@ You can reach me through email at <a href="ehthiede@bentcopperinstitute.org">eht
         By intelligently exploiting and learning substructures of a chemical system, 
         we hope to generate richer representations of chemical systems.
     </p>
+<h3>Extracting Free Energies from Cryo-Electron Microscopy</h3>
+  <p>
+  Proteins and other biological macromolecules form the essential machinery of life. Cryo-electron Microscopy has recently emerged as a leading technique for extracting individual structures of these macromolecules.  But in principle, Cryo-EM should give us to the entire range of possible structures for a given macromolecule, allowing us to extract biological free energies.  Working with the Structural Molecular Biophysics Group at Flatiron, I am developing new algorithms to extract free energies from Cryo-EM data.
+  </p>
+
 <h3>Error Estimates for MBAR</h3>
   <p>
     The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
     In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
     Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
-    I am mentoring Sherry Li in exploring and extending these expressions.
+    Recently, Sherry Li and I showed that we can derive error estimates for the MBAR equations as well.
+    In fact, our work is the first to rigorously trace how sampling in individual states affects the total error.
   </p>
 
 
 <h2>Selected Publications</h2>
     <ul>
         <li>
-            <a href="https://arxiv.org/abs/2103.01710">
+            <a href="https://arxiv.org/abs/2203.01227">
+                Understanding the Sources of Error in MBAR through Asymptotic Analysis
+            </a>
+        </li>
+        <li>
+            <a href="https://proceedings.neurips.cc/paper/2021/hash/faf02b2358de8933f480a146f4d2d98e-Abstract.htmlhttps://arxiv.org/abs/2103.01710">
                 Autobahn: Automorphism-based Graph Neural Nets
+            </a>
+        </li>
+        <li>
+            <a href="https://www.nature.com/articles/s41598-021-92621-1">
+                A Bayesian approach to extracting free-energy profiles from cryo-electron microscopy experiments
             </a>
         </li>
         <li>
