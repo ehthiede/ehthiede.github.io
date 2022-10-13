@@ -1,244 +1,254 @@
 <!DOCTYPE html>
+<!--
+  flatironinstitute.org
+  -->
 <html>
-<head>
-<title>Personal Website of Erik Thiede</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Style the header */
-header {
-  /* background-color: grey; */
-  background-color: #bfbfbf;
-  padding: 5px;
-  text-align: center;
-  font-size: 20px;
-  color: black;
-  font-family: Helvetica
-}
-
-/* Create two columns/boxes that floats next to each other */
-aside {
-  float: left;
-  width: 20%;
-  /* height: 300px;  only for demonstration, should be removed */
-  background: white;
-  padding: 0px;
-  font-family: Helvetica
-}
-
-article {
-  float: left;
-  padding-left: 30px;
-  padding-top: 00px;
-  width: 80%;
-  background-color: white;
-  font-family: Helvetica
-  /* height: 300px; /* only for demonstration, should be removed */
-}
-
-
-img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.collapsible {
-  background-color: #bfbfbf;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: 1px solid black;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #888;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: black;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  <!-- transition: max-height 0.2s ease-out; -->
-  background-color: #f1f1f1;
-}
-
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  aside, article {
-    width: 100%;
-    height: auto;
-  }
-</style>
-</head>
-<body>
-<!-- <header> -->
-  <!-- <h1>Erik Henning Thiede</h1> -->
-<!-- </header> -->
-
-<section>
-  <aside>
-      <!--
-    <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
-    </ul>
-      -->
-        <img src="myface.jpg" alt="A picture of Erik Henning Thiede's face." width="100%" class="marginauto"> 
-        <p align='center'>
-        <!-- <br> -->
-        <h2>Erik Henning Thiede</h2>
-        <!-- <br> -->
-        <a href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&amp;hl=en">Google Scholar</a> 
-        <br>
-        <a href="ehthiede_cv.pdf">Curriculum Vitae</a> 
-        <br>
-        <a href="https://serafinaha.wixsite.com/byserafina">Artist page of my amazing and wonderful spouse</a> 
-        </p>
-  </aside>
-  <article>
-            <h2>About Me</h2>
+  <head>
+    <title>Erik Henning Thiede| Flatiron Institute</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- TODO: If you wish to use your center color scheme, please replace main.css with the center acronymn ex:
+      cca.css, ccb.css, etc
+    -->
+    <link rel="stylesheet" href="assets/css/ccm.css" />
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="#" class="image avatar"
+          ><img src="images/myface.jpg" alt=""
+        /></a>
+      </div>
+      <nav id="nav">
+        <ul>
+          <li>
+            <a
+              href="#about"
+              style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#research"
+              style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+              >Research</a
+            >
+          </li>
+          <li>
+            <a
+              href="#papers"
+              style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+              >Papers</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Main -->
+    <div id="main">
+      <!-- About -->
+      <section id="about">
+        <header class="major">
+          <h2>Erik Thiede, Ph.D.</h2>
+        </header>
         <p>
-            I am a postdoctoral scholar studying theoretical and computational chemistry.  This means that theoretically speaking, I can both use computers and do chemistry.  
-            I received my PhD working with Profs. Aaron Dinner and Jonathan Weare working on enhanced sampling algorithms.
-            Currently, I am a research fellow at the <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-mathematics/">Flatiron Institute Center for Computational Mathematics (CCM)</a>.
-            There, I spend most of my time thinking about how we can take molecules and molecular data, feed it into a computer, and get scientific insight back out.
-            <br>
-<h4>Contact Information</h4>
-You can reach me through email at <a href="ehthiede@bentcopperinstitute.org">ehthiede@bentcopperinstitute.org</a>.  Ok, so that's not <i>quite</i> right. Time to see if you, dear reader, pass the Turing test.  If you are indeed a human and not a bot, you should be able to change the email address to be correct :-).
-
-<h2>Current Projects</h2>
-<!-- <button class="collapsible">New approaches for learning on permutation-equivariant structures</button> -->
-<!-- <div class="content"> -->
-<!--     <p> -->
-<!--         Chemical systems are complex arrangements of identical parts. -->  
-<!--         As a consequence, symmetry under permutation is fundamental to chemical systems. -->
-<!--         However, this symmetry also severely restricts the space of possible learning algorithms: -->
-<!--         if not constructed carefully, algorithms that attempt to learn new structures must face a combinatorial explosion -->
-<!--         in the number of terms. -->
-<!--         Currently, I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems. -->
-<!--         By intelligently exploiting and learning substructures of a chemical system, --> 
-<!--         we hope to generate richer representations of chemical systems. -->
-<!--     </p> -->
-<!-- </div> -->
-<!-- <button class="collapsible">Error Estimates for MBAR</button> -->
-<!-- <div class="content"> -->
-<!--   <p> -->
-<!--     The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations. -->
-<!--     In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations. -->
-<!--     Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error. -->  
-<!--     I am mentoring Sherry Li in exploring and extending these expressions. -->
-<!--   </p> -->
-<!-- </div> -->
-<h3>New approaches for learning on permutation-equivariant structures</h3>
-    <p>
-        Chemical systems are complex arrangements of identical parts.  
-        As a consequence, symmetry under permutation is fundamental to chemical systems.
-        However, this symmetry also severely restricts the space of possible learning algorithms:
+          I'm a Flatiron Research Fellow in the
+          <a
+            href="https://www.simonsfoundation.org/flatiron/center-for-computational-biology/"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Center for Computational Mathematics</a
+          >
+          at the
+          <a
+            href="https://www.simonsfoundation.org/flatiron/"
+            rel="noreferrer noopener"
+            target="_blank"
+            >Flatiron Institute</a
+          >
+          working on theoretical and computational chemistry.  This means that theoretically speaking, I can both use computers and do chemistry. I received my PhD working with Profs. Aaron Dinner and Jonathan Weare on enhanced sampling algorithms for molecular dynamics.
+          Currently, I spend most of my time thinking about how we can take biomolecules and biomolecular data, feed them into a computer, and get scientific insight back out.
+          <a href="pdfs/ehthiede_cv.pdf" rel="noreferrer noopener" target="_blank"
+            >Download my CV.</a
+          >
+        </p>
+      </section>
+      <!-- Research -->
+      <section id="research">
+        <h2>Research</h2>
+        <div class="row">
+          <article class="col-6 col-12-xsmall work-item">
+            <h3>Extracting Free Energies from Cryo-Electron Microscopy</h3>
+            <p>
+  Cryo-electron Microscopy has recently emerged as a leading technique for extracting protein structures.  But in principle, Cryo-EM should give us to the entire range of possible structures for a given macromolecule, allowing us to extract biological free energies.  Working with the Structural Molecular Biophysics Group at Flatiron, I am developing new algorithms to extract free energies from Cryo-EM data.
+            </p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="images/fulls/from_cryoBIFE.png" class="image fit thumb">
+              <img src="images/thumbs/from_cryoBIFE.png" alt="Free energy surface for TMEM16F predicted from Cryo-EM data using the cryoBIFE algorithm."/>
+            </a>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <h3>New approaches for learning on permutation-equivariant structures</h3>
+            <p>
+        While symmetry under permutation is fundamental to chemistry, 
+        it also restricts the space of possible learning algorithms:
         if not constructed carefully, algorithms that attempt to learn new structures must face a combinatorial explosion
         in the number of terms.
-        Currently, I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems.
-        By intelligently exploiting and learning substructures of a chemical system, 
-        we hope to generate richer representations of chemical systems.
-    </p>
-<h3>Extracting Free Energies from Cryo-Electron Microscopy</h3>
-  <p>
-  Proteins and other biological macromolecules form the essential machinery of life. Cryo-electron Microscopy has recently emerged as a leading technique for extracting individual structures of these macromolecules.  But in principle, Cryo-EM should give us to the entire range of possible structures for a given macromolecule, allowing us to extract biological free energies.  Working with the Structural Molecular Biophysics Group at Flatiron, I am developing new algorithms to extract free energies from Cryo-EM data.
-  </p>
-
-<h3>Error Estimates for MBAR</h3>
-  <p>
+        I am working with Prof. Risi Kondor to develop new approaches to learning on chemical systems
+        by intelligently exploiting and learning substructures of a chemical system. 
+            </p>
+          </article>
+          <article class="col-6 col-12-xsmall work-item">
+            <a href="images/fulls/single_layer_2.png" class="image fit thumb">
+              <!-- TODOL Add alt text for popup caption. -->
+              <img src="images/thumbs/single_layer_2.png" alt="Diagram depicting the action of a single layer in the Autobahn neural network architecture."/>
+            </a>
+          </article>
+          <article class="col-12 col-12-xsmall work-item">
+            <h3>Error Estimates for MBAR</h3>
+            <p>
     The Multistate Bennett Acceptance Ratio is a popular framework for estimating free energies from multiple biased simulations.
-    In the <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">EMUS paper</a>, we introduced the iterative eigenvector method for umbrella sampling (iEMUS) algorithm that allows for extremely rapid (1-2 iterations) convergence of the MBAR equations.
-    Since then, we have found that iEMUS also allows for accurate error estimates for MBAR that account for autocorrelation times and give state-wise contributions to the error.  
-    Recently, Sherry Li and I showed that we can derive error estimates for the MBAR equations as well.
-    In fact, our work is the first to rigorously trace how sampling in individual states affects the total error.
-  </p>
-
-
-<h2>Selected Publications</h2>
-    <ul>
-        <li>
-            <a href="https://arxiv.org/abs/2203.01227">
-                Understanding the Sources of Error in MBAR through Asymptotic Analysis
-            </a>
-        </li>
-        <li>
-            <a href="https://proceedings.neurips.cc/paper/2021/hash/faf02b2358de8933f480a146f4d2d98e-Abstract.htmlhttps://arxiv.org/abs/2103.01710">
-                Autobahn: Automorphism-based Graph Neural Nets
-            </a>
-        </li>
-        <li>
-            <a href="https://www.nature.com/articles/s41598-021-92621-1">
-                A Bayesian approach to extracting free-energy profiles from cryo-electron microscopy experiments
-            </a>
-        </li>
-        <li>
-            <a href="https://pubs.acs.org/doi/abs/10.1021/acs.jpcb.0c06477">
-                Integrated Variational Approach to Conformational Dynamics: A Robust Strategy for Identifying Eigenfunctions of Dynamical Operators
-            </a>
-        </li>
-        <li>
-            <a href="https://epubs.siam.org/doi/abs/10.1137/20M1335984">
-                Error bounds for dynamical spectral estimation
-            </a>
-        </li>
-        <li>
-            <a href="https://aip.scitation.org/doi/abs/10.1063/1.5063730">
-                Galerkin approximation of dynamical quantities using trajectory data
-            </a>
-        </li>
-        <li>
-            <a href="https://arxiv.org/pdf/1705.08445.pdf">
-                Stratification as a general variance reduction method for Markov chain Monte Carlo
-            </a>
-        </li>
-        <li>
-            <a href="https://aip.scitation.org/doi/abs/10.1063/1.4960649">
-                Eigenvector method for umbrella sampling enables error analysis
-            </a>
-        </li>
-    </ul>
-  </article>
-</section>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
-
-</body>
+    But how sampling from the individual biased simulations leads to overall error has historically been poorly understood.
+    In recent work, Sherry Li and I have derived error estimates for the MBAR equations.
+    Our work is the first to rigorously account for the affect of sample correlation and can trace how sampling in individual states affects the total error.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- Papers -->
+      <section id="papers">
+        <h2>Selected Papers</h2>
+        <div class="row">
+          <div class="col-12 col-12-small">
+            <ol>
+              <li>
+                  Li, Xiang Sherry, et al. <i>Understanding the Sources of Error in MBAR through Asymptotic Analysis.</i> arXiv preprint arXiv:2203.01227 (2022).
+                <a
+                  href="https://arxiv.org/abs/2203.01227"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="button primary icon xsmall solid fa-external-link-alt"
+                  >arXiv</a
+                >
+              </li>
+              <li>
+                Thiede, Erik H., Wenda Zhou, and Risi Kondor. 
+                <i>Autobahn: Automorphism-based graph neural nets.</i>
+                Advances in Neural Information Processing Systems 34 (2021): 29922-29934.
+                <a
+                  href="pdfs/autobahn.pdf"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="button primary icon xsmall solid fa-download"
+                  >PDF</a
+                >
+              </li>
+              <li>
+                  Giraldo-Barreto, Julian, et al. <i>A Bayesian approach to extracting free-energy profiles from cryo-electron microscopy experiments.</i> Scientific Reports 11.1 (2021): 1-15.
+                <a
+                  href="pdfs/cryoBIFE.pdf"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="button primary icon xsmall solid fa-download"
+                  >PDF</a
+                >
+              </li>
+              <li>
+                  Thiede, Erik H., et al. <i>Galerkin approximation of dynamical quantities using trajectory data.</i> The Journal of Chemical Physics 150.24 (2019): 244111.
+                <a
+                  href="pdfs/DGA.pdf"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="button primary icon xsmall solid fa-download"
+                  >PDF</a
+                >
+              </li>
+            </ol>
+            <ul class="actions">
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?user=VPp8mhAAAAAJ&hl=en"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="button"
+                  >All Publications</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="row">
+          <div class="col-6 col-12-small">
+            <ul class="labeled-icons">
+              <li>
+                <h3 class="icon solid fa-home">
+                  <span class="label">Address</span>
+                </h3>
+                <a href="http://flatironinstitute.org">Flatiron Institute</a
+                ><br />
+                162 Fifth Avenue<br />
+                New York, NY 10010<br />
+                United States
+              </li>
+              <li>
+                <h3 class="icon solid fa-envelope">
+                  <span class="label">Email</span>
+                </h3>
+                <a href="mailto:ehthiede@flatironinstitute.org"
+                  >ehthiede[at]flatironinstitute.org</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <a
+          href="https://www.simonsfoundation.org/flatiron/"
+          class="image logo"
+          target="_blank"
+          id="logo"
+          rel="noreferrer noopener"
+        >
+          <img src="images/logo.svg" alt="logo" id="logo-icon" />
+        </a>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- TODO: Remove if not using Mathjax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </body>
 </html>
-
