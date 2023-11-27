@@ -1,3 +1,10 @@
+:root {
+  --carnellian: #B31B1B;
+  --coolgray11: #55565A;
+  --pms430c: #7D868C;
+  --coolgray4C: #BDBBBB;
+}
+
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
 @font-face {
@@ -222,7 +229,7 @@ body,
 input,
 select,
 textarea {
-  color: #666;
+  color: var(--coolgray11);
   font-family: "Univers Next W01", Helvetica, Ariel, sans-serif;
   font-size: 16pt;
   font-weight: 300;
@@ -235,12 +242,14 @@ a {
   -ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   border-bottom: dotted 1px;
-  color: #537eba;
+  /* color: var(--carnellian); */
+  color: var(--carnellian);
   text-decoration: none;
 }
 a:hover {
   border-bottom-color: transparent;
-  color: #537eba;
+  /* color: var(--carnellian); */
+  color: var(--carnellian);
   text-decoration: none;
 }
 
@@ -1549,7 +1558,7 @@ header h6 + p {
 }
 header.major h2 {
   font-size: 1.75m;
-  color: #537eba;
+  color: var(--carnellian);
 }
 
 /* Form */
@@ -1596,7 +1605,7 @@ input[type=password]:focus,
 input[type=email]:focus,
 select:focus,
 textarea:focus {
-  border-color: #537eba;
+  border-color: var(--carnellian);
 }
 
 select {
@@ -1646,7 +1655,7 @@ input[type=radio] {
 input[type=checkbox] + label,
 input[type=radio] + label {
   text-decoration: none;
-  color: #666;
+  color: var(--coolgray11);
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
@@ -1693,7 +1702,7 @@ input[type=radio]:checked + label:before {
 }
 input[type=checkbox]:focus + label:before,
 input[type=radio]:focus + label:before {
-  border-color: #537eba;
+  border-color: var(--carnellian);
 }
 
 input[type=checkbox] + label:before {
@@ -2156,16 +2165,16 @@ input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
 .button:hover {
-  border-color: #537eba;
-  color: #537eba !important;
+  border-color: var(--carnellian);
+  color: var(--carnellian) !important;
 }
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active,
 .button:active {
   background-color: rgba(83, 126, 186, 0.1);
-  border-color: #537eba;
-  color: #537eba !important;
+  border-color: var(--carnellian);
+  color: var(--carnellian) !important;
 }
 input[type=submit].icon,
 input[type=reset].icon,
@@ -2213,8 +2222,8 @@ input[type=submit].primary,
 input[type=reset].primary,
 input[type=button].primary,
 .button.primary {
-  background-color: #537eba;
-  border-color: #537eba;
+  background-color: var(--carnellian);
+  border-color: var(--carnellian);
   color: #ffffff !important;
 }
 input[type=submit].primary:hover,
@@ -2278,7 +2287,7 @@ input[type=button]:disabled,
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  background-color: #537eba;
+  background-color: var(--coolgray4C);
   background-attachment: scroll, scroll;
   background-position: top left, top left;
   background-repeat: repeat, no-repeat;
@@ -2353,21 +2362,22 @@ input[type=button]:disabled,
   -ms-transition: none;
   transition: none;
   border: 0;
-  color: rgba(255, 255, 255, 0.4);
+  /* color: rgba(255, 255, 255, 0.4); */
+  color: rgba(0, 0, 0, 0.4);
   display: block;
   text-decoration: none;
   font-size: 1.5em;
   line-height: 2;
 }
 #header #nav > ul li a.active {
-  color: #fff;
+  color: #000;
   -moz-transition: all 250ms ease-out;
   -webkit-transition: all 250ms ease-out;
   -ms-transition: all 250ms ease-out;
   transition: all 250ms ease-out;
 }
 #header #nav > ul li a:hover {
-  color: #fff;
+  color: #000;
   -moz-transition: all 250ms ease-out;
   -webkit-transition: all 250ms ease-out;
   -ms-transition: all 250ms ease-out;
@@ -2768,7 +2778,7 @@ h6 br {
     top: 0;
     width: 100%;
     z-index: 10001;
-    background: #537eba;
+    background: var(--carnellian);
     color: #fff;
     min-width: 320px;
   }
@@ -2821,7 +2831,7 @@ h6 br {
   }
   #titleBar .toggle:before {
     text-decoration: none;
-    background: #537eba;
+    background: var(--carnellian);
     color: #ffffff;
     content: "\f0c9";
     display: block;
